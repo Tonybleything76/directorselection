@@ -1,0 +1,27 @@
+google:
+  service_account_key_env: GOOGLE_CREDENTIALS_JSON
+  drive_root_folder_id: "YOUR_GOOGLE_DRIVE_FOLDER_ID"
+  master_sheet_id: "YOUR_MASTER_SHEET_ID"
+  master_sheet_tab: "Directors"
+  log_sheet_id: "YOUR_LOG_SHEET_ID"
+  doc_template_id: "YOUR_DOC_TEMPLATE_ID"
+
+columns:
+  director_name: "DirectorName"
+  category: "Category"
+  subcategories: "Subcategories"
+  region: "Region"
+  locations_text: "Notes"
+  reel_links: "ReelLinks"
+  company: "ProductionCompany"
+
+weights:
+  category_exact: 0.50
+  subcat_overlap: 0.25
+  region_exact: 0.15
+  fuzzy_location: 0.10
+
+regions_aliases:
+  "NYC": ["New York", "Tri-State", "NY Metro"]
+  "LA": ["Los Angeles", "SoCal", "LA Metro"]
+  "Bay Area": ["San Francisco", "SF", "NorCal"]
